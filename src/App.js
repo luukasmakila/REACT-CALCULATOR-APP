@@ -46,6 +46,32 @@ const App = () => {
     setOperation('')
   }
 
+  const calculate = () => {
+    let curr = parseFloat(currentOperand)
+    let prev = parseFloat(previousOperand)
+    if (currentOperation === '÷') {
+      if (curr === 0) return
+      const answer = prev / curr
+      setCurrentOperand(answer)
+      setPreviousOperand('')
+    }
+    if (currentOperation === '*') {
+      const answer = prev * curr
+      setCurrentOperand(answer)
+      setPreviousOperand('')
+    }
+    if (currentOperation === '+') {
+      const answer = prev + curr
+      setCurrentOperand(answer)
+      setPreviousOperand('')
+    }
+    if (currentOperation === '-') {
+      const answer = prev - curr
+      setCurrentOperand(answer)
+      setPreviousOperand('')
+    }
+  }
+
   const deleteLast = () => {
     setCurrentOperand(currentOperand.slice(0,-1))
   }
