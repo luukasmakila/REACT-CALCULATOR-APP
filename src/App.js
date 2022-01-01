@@ -1,21 +1,7 @@
 import React, {useState} from "react"
 import './styles.css'
-
-const Button = ({digit, handleClick}) => {
-  return (
-    <button value={digit} onClick={handleClick}>
-      {digit}
-    </button>
-  )
-}
-
-const OperationButton = ({operation, handleOperationClick}) => {
-  return (
-    <button value={operation} onClick={handleOperationClick}>
-      {operation}
-    </button>
-  )
-}
+import Button from "./components/digitButton"
+import OperationButton from './components/operationButton'
 
 const App = () => {
   const [currentOperand, setCurrentOperand] = useState('')
