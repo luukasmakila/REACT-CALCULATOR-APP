@@ -40,6 +40,16 @@ const App = () => {
     setCurrentOperand('')
   }
 
+  const clear = () => {
+    setCurrentOperand('')
+    setPreviousOperand('')
+    setOperation('')
+  }
+
+  const deleteLast = () => {
+    setCurrentOperand(currentOperand.slice(0,-1))
+  }
+
   return (
     <div className="calc-grid">
       <div className="output">
