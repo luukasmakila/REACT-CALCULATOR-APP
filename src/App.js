@@ -33,8 +33,11 @@ const App = () => {
   }
 
   const calculate = () => {
+    if(previousOperand === '' || currentOperand === '') return
+
     let curr = parseFloat(currentOperand)
     let prev = parseFloat(previousOperand)
+
     if (currentOperation === '÷') {
       if (curr === 0) return
       const answer = prev / curr
